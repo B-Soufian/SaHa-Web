@@ -10,7 +10,6 @@ function check_email($email) {
     $result = json_decode($response, true);
     return ($result['format_valid'] && $result['smtp_check']);
 }
-try {
     $conn = coonect(); 
     if(($_SERVER['REQUEST_METHOD'] == 'POST')){
         $first_name = $_POST["first_name"];
@@ -51,9 +50,7 @@ try {
             header("location:welcom.php?user=$first_name-$last_name");
         }
     }
-} catch (PDOException $e) {
-    echo "Problème de connexion " . $e->getMessage();
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
