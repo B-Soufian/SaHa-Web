@@ -2,7 +2,6 @@
 include '../includes/functions.php';
 session_start();
 check_user();
-    try{
         $conn = coonect();
         $user_id =$_SESSION["user_id"] ;
         $req = "select * from orders WHERE user_id = :uid order by created_at desc";
@@ -17,10 +16,7 @@ check_user();
         $products = $opp->fetchAll(PDO::FETCH_OBJ);
 
 
-    }
-    catch(PDOException $e){
-        echo "Problème de connexion ".$e->getMessage();
-    }
+  
 ?>
 <html lang="en">
 <head>
