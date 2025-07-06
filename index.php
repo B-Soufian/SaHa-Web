@@ -2,7 +2,6 @@
 session_start();
     include 'includes/functions.php';
 
-    try{
         $conn = coonect();      
         $req = "select * from products WHERE is_featured = 1";
         $op = $conn->prepare($req);
@@ -20,11 +19,8 @@ session_start();
             "Beverages"=>"fa-regular fa-glass"
         ];
         
-    }
-    catch(PDOException $e){
-        echo "ERR" . $e->getMessage() ;
-        
-    }
+    
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
