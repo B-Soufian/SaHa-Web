@@ -1,7 +1,6 @@
 <?php
     session_start();
     include 'includes/functions.php';
-    try{
         $conn = coonect(); 
         $req = "SELECT * FROM `users` WHERE email = :email and password = :pass";
         $op = $conn->prepare($req);
@@ -31,9 +30,7 @@
             }
         }
     }
-    catch(PDOException $e){
-        echo "Problème de connexion ".$e->getMessage();
-    }
+    
 ?>
 
 <!DOCTYPE html>
