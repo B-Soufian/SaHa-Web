@@ -29,7 +29,7 @@
                 echo "<script>alert('invalide password or email')</script>";
             }
         }
-    }
+    
     
 ?>
 
