@@ -2,17 +2,13 @@
 include '../includes/functions.php';
 session_start();
 check_user();
-     try{
         $conn = coonect();
         $req = "select * from users WHERE id = :id";
         $id = $_SESSION["user_id"];
         $op = $conn->prepare($req);
         $op->execute([":id"=>$id]);
         $user=$op->fetch(PDO::FETCH_OBJ);
-    }
-    catch(PDOException $e){
-        echo "ERR" . $e->getMessage() ;
-    }
+ 
 ?>
 <html lang="en">
 <head>
