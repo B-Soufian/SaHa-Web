@@ -1,6 +1,16 @@
 <?php
-    function coonect(){
-        return $conn = new PDO("mysql:host=localhost;port=3308;dbname=maroccan", "root", "");
+    function connect(){
+        $host = 'DB_HOST';
+        $db = 'DB_NAME';
+        $user = 'DB_USER';
+        $pass = 'DB_PASS';
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+            return $conn;
+        } catch (PDOException $e) {
+            echo "Err : " . $e->getMessage();
+            exit;
+        }
     }
     function check_admin(){
         if(empty($_SESSION["admin_id"])){
