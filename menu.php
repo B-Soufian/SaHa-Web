@@ -3,28 +3,6 @@
     include 'includes/functions.php';
     
     
-    try{
-         
-        // $conn = new PDO("mysql:host=localhost;port=3308;dbname=maroccan", "root", "");
-        // $search = $_GET['search'] ?? '';
-        // $category = $_GET['category'] ?? '';
-        // $req = "select * from products WHERE 1";
-        // if (!empty($search)) {
-        //     $req .= " AND name LIKE :search";
-        // }
-        // if (!empty($category)) {
-        //     $req .= " AND category = :category";
-        // }
-        // $op = $conn->prepare($req);
-        // if (!empty($search)) {
-        //     $op->bindValue(':search', '%' . $search . '%');
-        // }
-        // if (!empty($category)) {
-        //     $op->bindValue(':category', $category);
-        // }
-        // $op->execute();
-        // $products=$op->fetchAll(PDO::FETCH_OBJ);
-
 
         $conn = coonect(); 
         $search = $_GET['search'] ?? '';
@@ -61,10 +39,7 @@
         $tot = $countStmt->fetch(PDO::FETCH_OBJ);
         $total = $tot->total;
         $totalPages = ceil($total / $perPage);
-    }
-    catch(PDOException $e){
-        echo "Problème de connexion ".$e->getMessage();
-    } 
+   
 ?>
 <html lang="en">
 <head>
