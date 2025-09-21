@@ -10,17 +10,17 @@ SaHA is a modern web application for a Moroccan cuisine restaurant, offering a s
 | ![Home Page](screenshots/home.png) | ![Home - Full Page](screenshots/full.png) |
 |-----------------------------------|------------------------------------------|
 
-### Menu Page
-![Menu Page](screenshots/menu.png)
+### 📋 Menu Page
+<img src="screenshots/menu.png" width="500"/>
 
-### Cart
-![Cart](screenshots/cart.png)
+### 🛒 Cart
+<img src="screenshots/cart.png" width="500"/>
 
-### User Orders
-![Profile](screenshots/orders.png)
+### 👤 User Orders
+<img src="screenshots/orders.png" width="500"/>
 
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin_dashboard.png)
+### 🛠 Admin Dashboard
+<img src="screenshots/admin_dashboard.png" width="500"/>
 
 ---
 
